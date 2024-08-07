@@ -5,6 +5,7 @@ import Signup from './Routes/Signup.js';
 import Login from './Routes/Login.js';
 import cors from "cors";
 import todoRoutes from './Routes/todo.js';
+import SubsId from './Routes/SubsId.js';
 
 
 dotenv.config();
@@ -28,6 +29,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 app.use("/api", Signup);
 app.use("/api", Login);
 app.use('/api/todos', todoRoutes);
+app.use("/api/subid", SubsId);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
