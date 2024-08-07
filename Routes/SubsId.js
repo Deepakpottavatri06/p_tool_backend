@@ -43,9 +43,9 @@ router.post('/subsId_generate', (req, res) => {
           }
         ],
         "data":{
-          "username":username
+          "email":email
         }
-        
+
     }
     const wf = new WorkflowTriggerRequest(workflow_payload)
 
